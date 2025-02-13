@@ -532,6 +532,11 @@ a {
 .footer-media {
   font-size: 17px;
   margin-right: 20px;
+  transition: all 0.1s ease;
+}
+
+.footer-media:hover {
+  transform: scale(1.2);
 }
 
 .second-lower {
@@ -540,6 +545,7 @@ a {
 
 @media (max-width: 768px) {
   /* header */
+
   .ul-menu {
     display: none;
   }
@@ -696,22 +702,23 @@ a {
   }
 
   .footer-holder {
-    height: 100vh;
+    height: 90vh;
   }
 
   .upper {
     flex-direction: column;
     gap: 20px;
-    margin-left: 100px;
   }
 
-  .left-upper {
-    margin-left: 0;
+  .left-upper,
+  .right-upper,
+  .middle-upper {
+    margin-left: 50px;
   }
 
   .footer-img {
-    left: -9%;
-    top: -16%;
+    left: 5%;
+    top: -18%;
     width: 150px;
     height: 150px;
   }
@@ -727,5 +734,9 @@ a {
 
   .ri-linkedin-box-fill {
     margin-right: 0;
+  }
+
+  .footer-media {
+    font-size: 19px;
   }
 }
