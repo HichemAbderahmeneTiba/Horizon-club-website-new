@@ -779,6 +779,9 @@ a {
 
   /* about */
   /* beginning */
+  .head-section-about {
+    height: fit-content;
+  }
   .main-about {
     flex-direction: column;
     align-items: center;
@@ -793,31 +796,31 @@ a {
     .right-about {
       width: 70%;
     }
-
-    .about-video {
-      margin-bottom: 20px;
-      border-radius: 10px;
-    }
+  }
+  .about-video {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
   }
 
-  .side-info-about {
-    font-size: xx-small;
+  .left-about {
+    margin-bottom: 210px;
   }
 
   .side1 {
-    --initial-transform: translateY(-400%) translateX(200%);
+    --initial-transform: translateY(-280px) translateX(50px);
   }
 
   .side2 {
-    --initial-transform: translateY(-35%) translateX(-170%);
+    --initial-transform: translateY(-230px) translateX(-50px);
   }
 
   .side3 {
-    --initial-transform: translateY(-350%) translateX(-160%);
+    --initial-transform: translateY(-180px) translateX(50px);
   }
 
   .side4 {
-    --initial-transform: translateY(210%) translateX(150%);
+    --initial-transform: translateY(-130px) translateX(-50px);
   }
 }
 
