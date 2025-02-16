@@ -792,10 +792,9 @@ a {
     h1 {
       font-size: 2.5rem;
     }
-
-    .right-about {
-      width: 70%;
-    }
+  }
+  .right-about {
+    width: 70%;
   }
   .about-video {
     margin-bottom: 20px;
@@ -893,5 +892,9 @@ a {
 
   .footer-media {
     font-size: 19px;
+  }
+
+  .right-about {
+    width: 100%;
   }
 }
