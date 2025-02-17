@@ -903,6 +903,24 @@ a {
       font-size: 30px;
     }
   }
+  .right-why,
+  .right-why {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .why-horizon {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+  }
+  .why-item:first-child {
+    order: 1;
+  }
+  .why-item:last-child {
+    order: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -991,10 +1009,10 @@ a {
     padding: 0;
     height: 60vh;
   }
-  .why-horizon:first-child {
-    order: 0;
-  }
-  .why-horizon:last-child {
+  .why-item:first-child {
     order: 1;
+  }
+  .why-item:last-child {
+    order: 0;
   }
 }
