@@ -721,6 +721,125 @@ a {
   }
 }
 
+/* core team */
+.core-team {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  text-align: center;
+  h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+}
+
+.core {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.member {
+  border: 1px solid var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.memeber {
+  padding: 20px 25px;
+  width: 40vw;
+}
+
+.member-photo {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.core-team {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--body-color);
+}
+
+.core {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.member {
+  background-color: var(--white-color);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.member-photo {
+  border: 1px solid var(--white-color);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.member:hover {
+  background-color: rgb(145, 126, 126);
+  color: var(--body-color);
+  .member-photo {
+    filter: grayscale(0);
+  }
+  transform: scale(1.1);
+
+  .ri-mail-line {
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+  }
+}
+
+.member h3 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.member p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.member a {
+  display: block;
+  color: var(--black-color);
+  font-size: 20px;
+  margin-top: 10px;
+}
+.member a:hover {
+  color: var(--white-color);
+}
+
+.ri-mail-line {
+  border-radius: 90px;
+  padding: 10px;
+  border: 1px solid var(--black-color);
+  transition: all 0.4s linear;
+}
+.ri-mail-line:hover {
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
 @media (max-width: 900px) {
   /* header */
 
@@ -1006,7 +1125,8 @@ a {
   .why-horizon {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 3vh 0;
+
     height: 60vh;
   }
   .why-item:first-child {
