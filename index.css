@@ -640,6 +640,75 @@ a {
   --initial-transform: translateY(400%) translateX(60%);
 }
 
+/* Why horizon */
+.why-horizon {
+  width: 90vw;
+  height: 80vh;
+  padding: 3vh 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #23d07d;
+  color: var(--white-color);
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px var(--shadow-color);
+}
+
+.left-why {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  p {
+    font-size: 14px;
+  }
+  width: 90%;
+}
+
+.right-why {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  justify-content: center;
+  h2 {
+    font-size: 36px;
+    text-align: center;
+    width: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing1 4.5s steps(20) forwards infinite,
+      blink 3s step-end infinite;
+  }
+}
+
+.left-why {
+  width: 60%;
+}
+
+.why {
+  background-color: var(--body-color);
+  color: var(--black-color);
+  padding: 10px 5px;
+  border-radius: 20px;
+  opacity: 1;
+  width: 100%;
+}
+
+.animating-why {
+  opacity: 1;
+  animation: from-left-to-right 2s forwards;
+}
+
+@keyframes from-left-to-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
 @keyframes smallFloat {
   0% {
     transform: var(--initial-transform) translateY(0px);
@@ -652,7 +721,7 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   /* header */
 
   .ul-menu {
@@ -821,6 +890,19 @@ a {
   .side4 {
     --initial-transform: translateY(-130px) translateX(-50px);
   }
+
+  /* why */
+  .left-why {
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .right-why {
+    h2 {
+      font-size: 30px;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -896,5 +978,23 @@ a {
 
   .right-about {
     width: 100%;
+  }
+
+  .right-why,
+  .right-why {
+    width: 100%;
+  }
+
+  .why-horizon {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: 60vh;
+  }
+  .why-horizon:first-child {
+    order: 0;
+  }
+  .why-horizon:last-child {
+    order: 1;
   }
 }

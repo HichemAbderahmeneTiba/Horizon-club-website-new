@@ -10,6 +10,7 @@ const closeJoin = document.querySelector('.close-join');
 
 const inputs = document.querySelectorAll('.join');
 const select = document.querySelector('.choice');
+const whyElements = document.querySelectorAll('.why');
 
 menu.addEventListener('click', function (e) {
   e.preventDefault();
