@@ -1,0 +1,93 @@
+.core {
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 1rem; /* Space between items */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overscroll-behavior-inline: contain; /* Prevent scroll chaining */
+  width: 100%; /* Take full width of the parent */
+  padding-bottom: 1rem; /* Add padding to avoid cutting off shadows */
+}
+
+.member {
+  border: 1px solid var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px; /* Fixed width for each member */
+  flex-shrink: 0; /* Prevent shrinking */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.member:hover {
+  transform: translateY(-5px); /* Add a hover effect */
+}
+
+.member-photo {
+  border: 1px solid var(--white-color);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.member:hover .member-photo {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.member h3 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.member p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.member a {
+  display: block;
+  color: var(--black-color);
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.member a:hover {
+  color: var(--white-color);
+}
+
+.ri-mail-line {
+  border-radius: 90px;
+  padding: 10px;
+  border: 1px solid var(--black-color);
+  transition: all 0.4s linear;
+}
+
+.ri-mail-line:hover {
+  background-color: var(--black-color);
+}
+
+<div class="member">
+            <h3 class="job">Design Leader</h3>
+            <img src="images/salim.jpg" alt="Salim" class="member-photo" />
+            <p>Salim Fergani</p>
+            <a href="mailto:salimfergani488@gmail.com"
+              ><i class="ri-mail-line"></i
+            ></a>
+          </div>
+          <div class="member">
+            <h3 class="job">External Relations Leader</h3>
+            <img src="images/bouchra.jpg" alt="Salim" class="member-photo" />
+            <p>Safar-Bati Bouchra</p>
+            <a href="mailto:bouchrasafarbati@gmail.com"
+              ><i class="ri-mail-line"></i
+            ></a>
+          </div>
