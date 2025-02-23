@@ -1202,6 +1202,7 @@ a {
 
   .formations-workshops {
     grid-template-columns: 1fr;
+    width: 90vw;
   }
 
   .img-formation {

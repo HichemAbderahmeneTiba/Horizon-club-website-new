@@ -81,18 +81,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 if (joinUs) {
   joinUs.addEventListener('click', function () {
-    JoinUsForm.classList.add('showing');
-    JoinUsForm.style.opacity = '1';
-    JoinUsForm.style.display = 'block';
+    joinUsForm.classList.add('showing');
+    joinUsForm.style.opacity = '1';
+    joinUsForm.style.display = 'block';
     removeOpacity('joinUsForm');
   });
 }
 
 if (closeJoin) {
   closeJoin.addEventListener('click', function () {
-    JoinUsForm.classList.remove('showing');
-    JoinUsForm.style.opacity = '0';
-    JoinUsForm.style.display = 'none';
+    joinUsForm.classList.remove('showing');
+    joinUsForm.style.opacity = '0';
+    joinUsForm.style.display = 'none';
     addOpacity('joinUsForm');
     inputs.forEach(input => (input.value = ''));
     select.value = 'no';
