@@ -807,6 +807,76 @@ a {
 .swiper-wrapper {
   height: 50vh;
 }
+.formations {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.f1 {
+  text-indent: 70px;
+  width: fit-content;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing1 3.5s forwards infinite, blink 2s step-end infinite;
+}
+
+.f0 {
+  text-indent: -80px;
+  animation: typing1 3.5s forwards infinite, blink 2s step-end infinite;
+  width: fit-content;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.formations-workshops {
+  width: 80vw;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 25px;
+  gap: 25px;
+  background: linear-gradient(to right, #f7b185, #a3c9e6);
+  border-radius: 20px;
+}
+
+.formation {
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  border: 1px solid black;
+  border-radius: 25px;
+  background-color: var(--body-color);
+  padding: 20px;
+}
+
+.photo-formation {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.img-formation {
+  border-radius: 25px;
+  width: 100%;
+  height: 180px;
+  box-shadow: 0 0 5px var(--shadow-color);
+}
+
+.formation-name {
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+.formation-instructor {
+  font-size: 1rem;
+}
+
 @media (max-width: 900px) {
   /* header */
 
@@ -961,6 +1031,10 @@ a {
     margin-bottom: 210px;
   }
 
+  .why-span {
+    font-weight: 800;
+  }
+
   .side1 {
     --initial-transform: translateY(-280px) translateX(50px);
   }
@@ -1006,6 +1080,16 @@ a {
   }
   .why-item:last-child {
     order: 0;
+  }
+
+  /* Formations */
+  .formations-workshops {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .f0,
+  .f1 {
+    font-size: 30px;
   }
 }
 
@@ -1094,7 +1178,7 @@ a {
     flex-direction: column;
     padding: 3vh 0;
 
-    height: 60vh;
+    height: fit-content;
   }
   .why-item:first-child {
     order: 1;
@@ -1105,5 +1189,22 @@ a {
 
   .swiper {
     height: 60vh;
+  }
+
+  .joinUsForm {
+    height: fit-content;
+    padding-bottom: 70px;
+  }
+
+  .swiper-wrapper {
+    height: fit-content;
+  }
+
+  .formations-workshops {
+    grid-template-columns: 1fr;
+  }
+
+  .img-formation {
+    height: 130px;
   }
 }
