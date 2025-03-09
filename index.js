@@ -127,3 +127,24 @@ aTag.forEach(a =>
     }, 500);
   })
 );
+
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const whys = entry.target.querySelectorAll('.why'); // Get all `.why` elements in the container
+          whys.forEach((why, index) => {
+            setTimeout(() => {
+              why.classList.add('animating-why');
+            }, index * 500);
+          });
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  const containers = document.querySelectorAll('.left-why');
+  containers.forEach(container => observer.observe(container));
+});
