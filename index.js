@@ -7,10 +7,10 @@ const sideMenu = document.querySelector('.small-nav');
 const joinUs = document.querySelector('.joinUs');
 const joinUsForm = document.querySelector('.joinUsForm');
 const closeJoin = document.querySelector('.close-join');
-
 const inputs = document.querySelectorAll('.join');
 const select = document.querySelector('.choice');
 const whyElements = document.querySelectorAll('.why');
+const aTag = document.querySelectorAll('a');
 
 menu.addEventListener('click', function (e) {
   e.preventDefault();
@@ -117,3 +117,12 @@ const observer = new IntersectionObserver(
 containers.forEach(container => {
   observer.observe(container);
 });
+
+aTag.forEach(a =>
+  a.addEventListener('click', function (e) {
+    e.preventDefault();
+    setTimeout(() => {
+      window.location.href = this.getAttribute('href');
+    }, 500);
+  })
+);

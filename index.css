@@ -1093,10 +1093,13 @@ a {
   font-weight: 800;
   transition: all 0.4s ease;
 }
-.see-events:hover {
+.see-events:hover,
+.see-events:active,
+.see-events:focus {
   transform: scale(1.09);
   letter-spacing: 10px;
   background-color: #786ffc;
+  color: var(--white-color);
 }
 
 @media (max-width: 900px) {
@@ -1473,6 +1476,7 @@ a {
     width: 100%;
   }
   .events {
+    align-items: flex-start;
     width: 90vw;
     padding: 50px 0;
   }
@@ -1481,6 +1485,7 @@ a {
   .h-events,
   .h-events {
     font-size: 28px;
+    text-align: left;
   }
 
   .h-events {
@@ -1513,6 +1518,7 @@ a {
     }
 
     .net-img {
+      left: -20px;
       width: 70%;
       height: 230px;
     }
