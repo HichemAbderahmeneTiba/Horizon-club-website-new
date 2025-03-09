@@ -1476,7 +1476,6 @@ a {
     width: 100%;
   }
   .events {
-    align-items: flex-start;
     width: 90vw;
     padding: 50px 0;
   }
@@ -1493,14 +1492,12 @@ a {
   }
 
   .event {
-    justify-content: flex-start;
-    align-items: flex-start;
     width: 90vw;
     padding: 20px 0;
   }
 
   .event-p {
-    text-align: left;
+    text-align: center;
   }
 
   .photo-event {
@@ -1518,9 +1515,7 @@ a {
     }
 
     .net-img {
-      left: -20px;
       width: 70%;
-      height: 230px;
     }
   }
 }

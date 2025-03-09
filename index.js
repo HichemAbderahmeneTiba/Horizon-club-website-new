@@ -1,5 +1,5 @@
 'use strict';
-
+// Selectors
 const body = document.body;
 const close = document.querySelector('.close-btn');
 const menu = document.querySelector('.menu-btn');
@@ -10,8 +10,25 @@ const closeJoin = document.querySelector('.close-join');
 const inputs = document.querySelectorAll('.join');
 const select = document.querySelector('.choice');
 const whyElements = document.querySelectorAll('.why');
+const containers = document.querySelectorAll('.container');
 const aTag = document.querySelectorAll('a');
 
+// Functions
+function removeOpacity(excludedClass) {
+  document.querySelectorAll(`body > *:not(.${excludedClass})`).forEach(el => {
+    el.style.opacity = '0.5';
+    el.style.transition = 'opacity 0.3s ease';
+  });
+}
+
+function addOpacity(includedClass) {
+  document.querySelectorAll(`body > *:not(.${includedClass})`).forEach(el => {
+    el.style.opacity = '1';
+    el.style.transition = 'opacity 0.3s ease';
+  });
+}
+
+// Events
 menu.addEventListener('click', function (e) {
   e.preventDefault();
   removeOpacity('small-nav');
@@ -31,20 +48,6 @@ close.addEventListener('click', function (e) {
   joinUsForm.style.opacity = '0';
   joinUsForm.style.display = 'none';
 });
-
-function removeOpacity(excludedClass) {
-  document.querySelectorAll(`body > *:not(.${excludedClass})`).forEach(el => {
-    el.style.opacity = '0.5';
-    el.style.transition = 'opacity 0.3s ease';
-  });
-}
-
-function addOpacity(includedClass) {
-  document.querySelectorAll(`body > *:not(.${includedClass})`).forEach(el => {
-    el.style.opacity = '1';
-    el.style.transition = 'opacity 0.3s ease';
-  });
-}
 
 document.addEventListener('DOMContentLoaded', function () {
   if (typeof Swiper !== 'undefined') {
@@ -98,8 +101,6 @@ if (closeJoin) {
     select.value = 'no';
   });
 }
-
-const containers = document.querySelectorAll('.container');
 
 const observer = new IntersectionObserver(
   entries => {
