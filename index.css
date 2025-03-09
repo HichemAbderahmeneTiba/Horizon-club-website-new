@@ -1117,6 +1117,50 @@ a {
   transform: translateX(0);
 }
 
+/* Events Page */
+.ImagesFromEvents {
+  width: 100%;
+  height: 70vh;
+  max-width: 90vw; /* Adjust as needed */
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.imgs-wrapper {
+  display: flex;
+}
+
+.evenment-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.evenment-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px; /* Optional */
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff; /* Change color */
+
+  padding: 10px;
+  border-radius: 50%;
+}
+
 @media (max-width: 900px) {
   /* header */
   .ul-menu {
