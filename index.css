@@ -1102,9 +1102,12 @@ a {
   color: var(--white-color);
 }
 
+.disable-clicks {
+  pointer-events: none;
+}
+
 @media (max-width: 900px) {
   /* header */
-
   .ul-menu {
     display: none;
   }
@@ -1350,6 +1353,10 @@ a {
 }
 
 @media (max-width: 480px) {
+  .hero-img {
+    height: 180px;
+    z-index: 1000;
+  }
   /* hero */
   .horizon {
     flex-direction: column;
@@ -1360,9 +1367,21 @@ a {
   .item:last-child {
     order: 0;
   }
+  .p-hero {
+    margin-bottom: 20px;
+  }
 
+  .hero {
+    height: fit-content;
+  }
+
+  .joinUs {
+    margin-top: 20px;
+  }
   .right-hero {
     height: 50%;
+    width: 80%;
+    margin-bottom: 20px;
   }
 
   .left-hero {

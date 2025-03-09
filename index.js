@@ -34,7 +34,7 @@ menu.addEventListener('click', function (e) {
   removeOpacity('small-nav');
   sideMenu.style.left = '0';
   sideMenu.style.opacity = '1';
-
+  joinUs.classList.add('disable-clicks');
   joinUsForm.style.opacity = '0';
   joinUsForm.style.display = 'none';
 });
@@ -44,7 +44,7 @@ close.addEventListener('click', function (e) {
   sideMenu.style.left = '-50vw';
   sideMenu.style.opacity = '0';
   addOpacity('small-nav');
-
+  joinUs.classList.remove('disable-clicks');
   joinUsForm.style.opacity = '0';
   joinUsForm.style.display = 'none';
 });
