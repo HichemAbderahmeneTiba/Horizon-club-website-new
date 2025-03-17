@@ -12,6 +12,7 @@ const select = document.querySelector('.choice');
 const whyElements = document.querySelectorAll('.why');
 const containers = document.querySelectorAll('.container');
 const aTag = document.querySelectorAll('a');
+const header = document.querySelector('.header');
 
 // Functions
 function removeOpacity(excludedClass) {
@@ -77,8 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       },
     });
-  } else {
-    console.error('Swiper is not defined');
   }
 });
 
@@ -147,4 +146,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const containers = document.querySelectorAll('.left-why');
   containers.forEach(container => observer.observe(container));
+});
+
+// dark mode
+
+document.addEventListener('DOMContentLoaded', () => {
+  const darkLightToggle = document.querySelector('.dark-light');
+  const sunIcon = document.querySelector('.light');
+  const moonIcon = document.querySelector('.dark');
+  const navLogo = document.querySelector('.nav-icon');
+  const heroImg = document.querySelector('.hero-img');
+  const logoIdeator = document.querySelector('.ideator-logo');
+  const partnersImgs = document.querySelector('.partners-imgs');
+
+  // Function to change logo src based on mode
+  const updateLogo = isDark => {
+    if (isDark) {
+      navLogo.src = 'images/horizon-logo-white.png';
+      heroImg.src = 'images/Horizon_Logo_black.png';
+      logoIdeator.src = 'images/ideator_logo (1).png';
+    } else {
+      navLogo.src = 'images/horizon-logo-white.png';
+      heroImg.src = 'images/Horizon_Logo_black.png';
+      logoIdeator.src = 'images/ideator_logo (7).png';
+    }
+  };
+
+  // Load saved mode from localStorage
+  const isDarkMode = localStorage.getItem('theme') === 'dark';
+  if (isDarkMode) {
+    document.documentElement.classList.add('dark-mode');
+    sunIcon.style.display = 'block';
+    moonIcon.style.display = 'none';
+  } else {
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'block';
+  }
+  updateLogo(isDarkMode);
+
+  // Toggle Dark/Light Mode
+  darkLightToggle.addEventListener('click', () => {
+    const isNowDark = document.documentElement.classList.toggle('dark-mode');
+    if (isNowDark) {
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+      localStorage.setItem('theme', 'light');
+    }
+    updateLogo(isNowDark);
+  });
 });

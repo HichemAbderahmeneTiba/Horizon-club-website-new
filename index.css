@@ -7,6 +7,15 @@
   --white-color: white;
 }
 
+:root.dark-mode {
+  --body-color: #141e24;
+  --header-color: #291b39;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --font-color: #ffffff;
+  --black-color: #ffffff;
+  --white-color: #1e1e1e;
+}
+
 @keyframes typing1 {
   0% {
     width: 0;
@@ -160,6 +169,7 @@ header {
 .light,
 .dark {
   font-size: 25px;
+  color: var(--black-color);
   display: inline-block;
   transition: transform 0.2s ease;
 }
@@ -280,7 +290,7 @@ main {
   margin-top: 1rem;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--white-color);
   max-width: 400px;
   font-size: 14px;
   letter-spacing: 1px;
@@ -334,7 +344,7 @@ main {
   font-size: 14px;
   border-radius: 5px;
   margin-bottom: 20px;
-  background-color: #fffaf3;
+  background-color: var(--body-color);
   font-family: 'Plus Jakarta Sans', sans-serif;
   transition: 0.3s all ease;
   font-weight: 550;
@@ -342,7 +352,7 @@ main {
   z-index: 3000;
   .button-hero {
     transition: all 0.2s ease;
-    color: black;
+    color: var(--black-color);
   }
   .button-hero:hover {
     cursor: pointer;
@@ -364,7 +374,7 @@ main {
   left: 50%;
   height: 83vh;
   transform: translate(-50%, -50%);
-  background-color: var(--white-color);
+  background-color: white;
   padding: 30px 35px;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -1249,7 +1259,6 @@ a {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  box-shadow: 1px 1px 5px var(--black-color);
   background-color: var(--white-color);
   border: 0.5px solid var(--black-color);
   padding: 10px;
@@ -1280,7 +1289,12 @@ a {
   text-align: center;
   font-weight: 600;
   padding: 10px;
+}
+
+.swiper-pagination {
+  z-index: 1000;
   color: var(--black-color);
+  color: #000;
 }
 
 .arrow {
@@ -1296,14 +1310,55 @@ header {
 
 .card-hint {
   margin-bottom: 20px;
+  font-size: 30px;
 }
 
-.evenments {
-  width: 90vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 85vh;
+.partners-imgs {
+  box-shadow: none;
+}
+
+.h-events,
+.f0,
+.f1,
+.core-h,
+.event-p,
+.card-hint,
+.side-info-about,
+.job,
+.partners-h {
+  color: var(--black-color);
+}
+
+.member {
+  p {
+    color: var(--black-color);
+  }
+}
+
+.right-why {
+  h2 {
+    color: white;
+  }
+}
+
+.left-about {
+  p,
+  h1 {
+    color: white;
+  }
+}
+
+.event-learn {
+  color: black;
+}
+
+.small-front,
+.small-back {
+  background-color: white;
+}
+
+.formation {
+  background-color: #fffaf3;
 }
 
 @media (max-width: 900px) {
@@ -1322,6 +1377,7 @@ header {
   }
   .menu-btn,
   .close-btn {
+    color: var(--black-color);
     display: block;
     cursor: pointer;
     font-size: 25px;
