@@ -17,14 +17,14 @@ const aTag = document.querySelectorAll('a');
 function removeOpacity(excludedClass) {
   document.querySelectorAll(`body > *:not(.${excludedClass})`).forEach(el => {
     el.style.opacity = '0.5';
-    el.style.transition = 'opacity 0.3s ease';
+    el.style.transition = 'all 0.3s ease';
   });
 }
 
 function addOpacity(includedClass) {
   document.querySelectorAll(`body > *:not(.${includedClass})`).forEach(el => {
     el.style.opacity = '1';
-    el.style.transition = 'opacity 0.3s ease';
+    el.style.transition = 'all 0.3s ease';
   });
 }
 

@@ -59,7 +59,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--body-color);
   line-height: 1.6;
-  height: 100vh;
+  height: auto;
 }
 
 a {
@@ -1281,6 +1281,21 @@ a {
   font-weight: 600;
   padding: 10px;
   color: var(--black-color);
+}
+
+.arrow {
+  color: #5449ff;
+  font-weight: 700;
+}
+
+header {
+  position: sticky;
+  top: 0%;
+  z-index: 100;
+}
+
+.card-hint {
+  margin-bottom: 20px;
 }
 
 .evenments {
