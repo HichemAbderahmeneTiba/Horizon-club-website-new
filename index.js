@@ -19,6 +19,8 @@ function removeOpacity(excludedClass) {
   document.querySelectorAll(`body > *:not(.${excludedClass})`).forEach(el => {
     el.style.opacity = '0.5';
     el.style.transition = 'all 0.3s ease';
+    header.style.opacity = '1';
+    header.style.backgroundColor = '#120026';
   });
 }
 
@@ -162,13 +164,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to change logo src based on mode
   const updateLogo = isDark => {
     if (isDark) {
-      navLogo.src = 'images/horizon-logo-white.png';
-      heroImg.src = 'images/Horizon_Logo_black.png';
-      logoIdeator.src = 'images/ideator_logo (1).png';
+      if (navLogo) navLogo.src = 'images/horizon-logo-white.png';
+      if (heroImg) heroImg.src = 'images/Horizon_Logo_black.png';
+      if (logoIdeator) logoIdeator.src = 'images/ideator_logo (1).png';
+      document
+        .querySelectorAll('.swiper-pagination-bullet')
+        .forEach(blt => (blt.style.backgroundColor = 'white'));
     } else {
-      navLogo.src = 'images/horizon-logo-white.png';
-      heroImg.src = 'images/Horizon_Logo_black.png';
-      logoIdeator.src = 'images/ideator_logo (7).png';
+      if (navLogo) navLogo.src = 'images/horizon-logo-white.png';
+      if (heroImg) heroImg.src = 'images/Horizon_Logo_black.png';
+      if (logoIdeator) logoIdeator.src = 'images/ideator_logo (7).png';
     }
   };
 
