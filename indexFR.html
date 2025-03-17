@@ -42,24 +42,24 @@
     <link rel="stylesheet" href="index.css" />
     <title>Horizon Club</title>
   </head>
-  <body style="width: 100vw">
+  <body style="overflow-x: hidden">
     <header class="header">
       <div class="nav-menu">
         <ul class="ul-menu">
           <li class="menu-item">
-            <a href="index.html" class="link-page">Accueil</a>
+            <a href="indexFR.html" class="link-page">Accueil</a>
           </li>
 
           <li class="menu-item">
-            <a href="about.html" class="link-page">À propos</a>
+            <a href="aboutFR.html" class="link-page">À propos</a>
           </li>
 
           <li class="menu-item">
-            <a href="events.html" class="link-page">Événements</a>
+            <a href="eventsFR.html" class="link-page">Événements</a>
           </li>
 
           <li class="menu-item">
-            <a href="activities.html" class="link-page">Activités</a>
+            <a href="activitiesFR.html" class="link-page">Activités</a>
           </li>
         </ul>
         <i class="menu-btn ri-menu-line"></i>
@@ -110,7 +110,10 @@
             <h1 class="header-hero head1">
               <span class="bg-colored-bl">HO</span>RIZON Club
             </h1>
-            <h1 class="header-hero head2">
+            <h1
+              class="header-hero head2"
+              style="overflow-x: hidden; font-size: large"
+            >
               Où les <span class="bg-colored-gr">idées</span> prennent leur
               envol
             </h1>
@@ -299,6 +302,16 @@
             <option value="yes">Oui</option>
             <option value="no">Non</option>
           </select>
+        </li>
+        <li class="input-item">
+          <p class="input-title">Quel est votre IGE ?</p>
+          <input
+            type="text"
+            class="join"
+            placeholder="Ex : IGE 48"
+            maxlength="30"
+            required
+          />
         </li>
         <li class="input-item">
           <p class="input-title">Email</p>
