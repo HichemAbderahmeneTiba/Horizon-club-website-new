@@ -20,7 +20,6 @@ function removeOpacity(excludedClass) {
     el.style.opacity = '0.5';
     el.style.transition = 'all 0.3s ease';
     header.style.opacity = '1';
-    header.style.backgroundColor = '#120026';
   });
 }
 
@@ -159,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLogo = document.querySelector('.nav-icon');
   const heroImg = document.querySelector('.hero-img');
   const logoIdeator = document.querySelector('.ideator-logo');
-  const partnersImgs = document.querySelector('.partners-imgs');
 
   // Function to change logo src based on mode
   const updateLogo = isDark => {
@@ -174,6 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (navLogo) navLogo.src = 'images/horizon-logo-white.png';
       if (heroImg) heroImg.src = 'images/Horizon_Logo_black.png';
       if (logoIdeator) logoIdeator.src = 'images/ideator_logo (7).png';
+      document
+        .querySelectorAll('.swiper-pagination-bullet')
+        .forEach(blt => (blt.style.backgroundColor = 'blue'));
     }
   };
 
@@ -203,4 +204,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateLogo(isNowDark);
   });
+});
+
+const french = document.querySelector('.french');
+french.addEventListener('click', function (e) {
+  e.preventDefault();
 });

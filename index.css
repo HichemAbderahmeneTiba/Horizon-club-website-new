@@ -207,9 +207,6 @@ header {
   transform: translateY(-5px);
   box-shadow: 0 5px 10px var(--shadow-color);
 }
-.english {
-  display: none;
-}
 
 .small-nav {
   display: none;
@@ -1359,6 +1356,12 @@ header {
 
 .formation {
   background-color: #fffaf3;
+}
+
+.first,
+.second,
+.third {
+  width: 90vw;
 }
 
 @media (max-width: 900px) {
