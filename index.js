@@ -169,8 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .querySelectorAll('.swiper-pagination-bullet')
         .forEach(blt => (blt.style.backgroundColor = 'white'));
     } else {
-      if (navLogo) navLogo.src = 'images/horizon-logo-white.png';
-      if (heroImg) heroImg.src = 'images/Horizon_Logo_black.png';
+      if (navLogo) navLogo.src = 'images/Horizon_Logo_black.png';
+      if (heroImg) heroImg.src = 'images/horizon-logo-white.png';
       if (logoIdeator) logoIdeator.src = 'images/ideator_logo (7).png';
       document
         .querySelectorAll('.swiper-pagination-bullet')
