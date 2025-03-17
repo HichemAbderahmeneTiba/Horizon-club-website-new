@@ -265,67 +265,71 @@
     </main>
     <section class="joinUsForm">
       <i class="close-join ri-close-large-line"></i>
-      <ul class="input-list">
-        <li class="input-item">
-          <p class="input-title">First Name</p>
-          <input
-            type="text"
-            class="join"
-            placeholder="Enter Your First Name"
-            maxlength="30"
-            required
-          />
-        </li>
-        <li class="input-item">
-          <p class="input-title">Last Name</p>
-          <input
-            type="text"
-            class="join"
-            placeholder="Enter Your Last Name"
-            maxlength="30"
-            required
-          />
-        </li>
-        <li class="input-item">
-          <p class="input-title">Do you Study at ENSTTIC</p>
-          <select name="choice" class="choice">
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </li>
-        <li class="input-item">
-          <p class="input-title">What is your IGE</p>
-          <input
-            type="text"
-            class="join"
-            placeholder="Ex : IGE 48"
-            maxlength="30"
-            required
-          />
-        </li>
-        <li class="input-item">
-          <p class="input-title">Email</p>
-          <input
-            type="email"
-            class="join"
-            placeholder="Enter Your Email Adress"
-            maxlength="30"
-            required
-          />
-        </li>
-        <li class="input-item">
-          <p class="input-title">Phone Number</p>
-          <input
-            type="tel"
-            class="join"
-            placeholder="Enter Your Phone Number"
-            maxlength="10"
-            required
-          />
-        </li>
-      </ul>
-      <button class="joining">Jois Horizon</button>
+      <form>
+        <ul class="input-list">
+          <li class="input-item">
+            <p class="input-title">First Name</p>
+            <input
+              type="text"
+              class="join"
+              placeholder="Enter Your First Name"
+              maxlength="30"
+              required
+            />
+          </li>
+          <li class="input-item">
+            <p class="input-title">Last Name</p>
+            <input
+              type="text"
+              class="join"
+              placeholder="Enter Your Last Name"
+              maxlength="30"
+              required
+            />
+          </li>
+          <li class="input-item">
+            <p class="input-title">Do you Study at ENSTTIC</p>
+            <select name="choice" class="choice" required>
+              <option value="">Select an option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </li>
+          <li class="input-item">
+            <p class="input-title">What is your IGE</p>
+            <input
+              type="text"
+              class="join"
+              placeholder="Ex : IGE 48"
+              maxlength="30"
+              required
+            />
+          </li>
+          <li class="input-item">
+            <p class="input-title">Email</p>
+            <input
+              type="email"
+              class="join"
+              placeholder="Enter Your Email Adress"
+              maxlength="30"
+              required
+            />
+          </li>
+          <li class="input-item">
+            <p class="input-title">Phone Number</p>
+            <input
+              type="tel"
+              class="join"
+              placeholder="Enter Your Phone Number"
+              maxlength="10"
+              required
+            />
+          </li>
+        </ul>
+        <button type="submit" class="joining">Join Horizon</button>
+      </form>
     </section>
+
     <footer class="hidden container">
       <div class="footer-holder">
         <div class="upper">
