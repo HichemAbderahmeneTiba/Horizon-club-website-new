@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.3 }
   );
 
   const containers = document.querySelectorAll('.left-why');
